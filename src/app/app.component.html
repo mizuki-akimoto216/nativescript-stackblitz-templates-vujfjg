@@ -1,3 +1,15 @@
-<GridLayout>
+<!-- <GridLayout>
   <page-router-outlet></page-router-outlet>
+</GridLayout> -->
+
+<GridLayout>
+  <StackLayout>
+    <Label [text]="myTitle"></Label>
+  </StackLayout>
+</GridLayout>
+
+<GridLayout>
+  <StackLayout *ngFor="let fruit of fruits">
+    <Label [text]="fruit"></Label>
+  </StackLayout>
 </GridLayout>
