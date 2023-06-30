@@ -1,15 +1,21 @@
 <!-- <GridLayout>
   <page-router-outlet></page-router-outlet>
 </GridLayout> -->
+<ScrollView>
+  <GridLayout>
+    <StackLayout>
+      <Label [text]="myTitle"></Label>
+    </StackLayout>
+  </GridLayout>
 
-<GridLayout>
-  <StackLayout>
-    <Label [text]="myTitle"></Label>
-  </StackLayout>
-</GridLayout>
-
-<GridLayout>
-  <StackLayout *ngFor="let fruit of fruits">
-    <Label [text]="fruit"></Label>
-  </StackLayout>
-</GridLayout>
+  <GridLayout>
+    <StackLayout>
+      <StackLayout *ngFor="let product of products" class="productContainer">
+        <Image [src]="product.image" class="productImage"></Image>
+        <label [text]="product.title" class="h1"></label>
+        <label [text]="product.description" textWrap="true"></label>
+        <label [text]="'$' + product.price" class="productPrice"></label>
+      </StackLayout>
+    </StackLayout>
+  </GridLayout>
+</ScrollView>
